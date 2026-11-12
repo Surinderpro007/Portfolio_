@@ -131,7 +131,7 @@ export default function Page() {
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
+           {DATA.projects.slice(0, 5).map((project, id) => (
               <BlurFade
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
@@ -152,6 +152,16 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <div className="flex justify-center mt-8">
+  <a
+    href="https://github.com/Surinderpro007?tab=repositories"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-full border px-5 py-2 text-sm font-medium hover:bg-muted"
+  >
+    View more projects on GitHub
+  </a>
+</div>
       <section id="hackathons">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
